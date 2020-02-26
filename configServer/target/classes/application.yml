@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      uri: https://github.com/zkz13078229409/springCloud_01/tree/master/springCloud_01
+      server:
+        git:
+          search-paths: config2
+          username: zkz13078229409
+          password: zkz524300
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
